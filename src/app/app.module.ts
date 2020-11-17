@@ -15,7 +15,7 @@ import { CartComponent } from './cart/cart.component';
 import { ElectronicItemComponent } from './electronic-item/electronic-item.component';
 import { ElectronicService1 } from './ElectronicService1';
 import { ElectronicStoreComponent } from './electronic-store/electronic-store.component';
-import { FormsModule, FormGroup} from '@angular/forms';
+import { FormControl, FormGroup, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,8 +33,9 @@ import { FormsModule, FormGroup} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
+    FormGroup,
     FormsModule,
-    FormGroup
+    FormControl
   ],
   providers: [ElectronicService1],
   bootstrap: [AppComponent]

@@ -1,0 +1,17 @@
+<h3>Electronics</h3>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Buy</th>
+    </tr>
+    <tr *ngFor="let electronic of electronics">
+        <td>{{electronic._id}}</td>
+        <td>{{electronic.name}}</td>
+        <td>{{electronic.price}}</td>
+        <td>
+            <a [routerLink]="['/cart', { id:electronic._id }]">Buy Now</a>
+        </td>
+    </tr>
+</table>

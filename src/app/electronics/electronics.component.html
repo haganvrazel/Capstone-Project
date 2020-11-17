@@ -1,0 +1,22 @@
+<div class="container">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Electronic Name</th>
+                <th>Electronic Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let electronic of electronics;let rowIndex=index">
+                <td>{{rowIndex+1}}</td>
+                <td>{{electronic.name}}</td>
+                <td>{{electronic.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="electronic-store.component.html">
+        <button>Add Electronic</button>
+    </a>
+</div>

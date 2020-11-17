@@ -1,0 +1,12 @@
+<div>
+    <form [formGroup]="electronicRef" (ngSubmit)="storeProductDetails()">
+        <label>Electronic Id</label>
+        <input type="text" formControlName="_id"/><br/>
+        <label>Electronic Name</label>
+        <input type="text" formControlName="name"/><br/>
+        <label>Electronic Price</label>
+        <input type="text" formControlName="price"/><br/>
+        <input type="submit" value="Store Product"/>
+    </form>
+    {{result}}
+</div>

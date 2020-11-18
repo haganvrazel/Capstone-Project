@@ -25,15 +25,15 @@ export class ElectronicService {
   }
 
   addElectronic(electronic: Electronic): Observable<any> {
-    return this.http.post<any>(this.electronicUrl, electronic, httpOptions);
+    return this.http.post<any>("http://localhost:5000/electronic/storeElectronic", electronic, httpOptions);
   }
 
-  updateElectronicById(electronic: Electronic, _id: any): Observable<Electronic> {
-    return this.http.put<Electronic>(`${this.electronicUrl}/${_id}`, electronic, httpOptions);
+  updateElectronic(electronic: Electronic): Observable<any> {
+    return this.http.put<Electronic>(`${"http://localhost:5000/electronic/updateElectronic"}`, electronic, httpOptions);
   }
 
-  deleteElectronicById(_id: any): Observable<Electronic> {
-    return this.http.delete<Electronic>(`${this.electronicUrl}/${_id}`);
+  deleteElectronicById(_id: any): Observable<any> {
+    return this.http.delete<Electronic>(`${"http://localhost:5000/electronic/deleteElectronic"}/${_id}`);
   }
 
 }

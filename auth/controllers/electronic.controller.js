@@ -11,7 +11,7 @@ var findAll = (req,res)=> {
 
 // Retrieve Electronic details by Id
 var findById = (req,res)=> {
-    var idInfo = req.params._id;
+    var idInfo = req.params.id;
     ElectronicModel.find({_id:idInfo},(err,data)=> {
         if(err) throw err;
         res.json(data);
@@ -37,7 +37,7 @@ var addElectronic = (req,res)=> {
 
 // Deleting an electronic by Id
 var removeById = (req,res)=> {
-    var deleteId = req.params._id;
+    var deleteId = req.params.id;
     ElectronicModel.deleteOne({_id:deleteId},(err,result)=> {
         if(err) throw err;
         if(result.deleteCount == 0) {
@@ -49,7 +49,7 @@ var removeById = (req,res)=> {
 }
 
 // Updating an electronic by Id
-var updateById = (req,res)=> {   
+var updateFromDb = (req,res)=> {   
     var updateId = req.body._id;
     var updateName = req.body.name;
     var updatePrice = req.body.price;
@@ -64,4 +64,4 @@ var updateById = (req,res)=> {
     });
 }
 
-module.exports = {findAll, findById, addElectronic, removeById, updateById}
+module.exports = {findAll, findById, addElectronic, removeById, updateFromDb}

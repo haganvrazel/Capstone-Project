@@ -17,7 +17,7 @@ electronicRef = new FormGroup({
   ngOnInit(): void {
   }
 
-  storeProductDetails(): void {
+  storeElectronicDetails(): void {
     this.electronicService.addElectronic(this.electronicRef.value).
     subscribe(data=>this.result=data.msg)
   }

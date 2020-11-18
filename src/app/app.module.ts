@@ -15,7 +15,9 @@ import { CartComponent } from './cart/cart.component';
 import { ElectronicItemComponent } from './electronic-item/electronic-item.component';
 import { ElectronicService1 } from './ElectronicService1';
 import { ElectronicStoreComponent } from './electronic-store/electronic-store.component';
-import { FormControl, FormGroup, FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ElectronicDeleteComponent } from './electronic-delete/electronic-delete.component';
+import { ElectronicUpdateComponent } from './electronic-update/electronic-update.component';
 
 @NgModule({
   declarations: [
@@ -27,15 +29,16 @@ import { FormControl, FormGroup, FormsModule } from '@angular/forms';
     ElectronicsComponent,
     CartComponent,
     ElectronicItemComponent,
-    ElectronicStoreComponent
+    ElectronicStoreComponent,
+    ElectronicDeleteComponent,
+    ElectronicUpdateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    FormGroup,
     FormsModule,
-    FormControl
+    ReactiveFormsModule
   ],
   providers: [ElectronicService1],
   bootstrap: [AppComponent]

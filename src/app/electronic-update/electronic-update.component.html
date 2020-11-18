@@ -1,6 +1,6 @@
-<h2>Add Electronic</h2>
-<div class="addFrom">
-    <form [formGroup]="electronicRef" (ngSubmit)="storeElectronicDetails()">
+<h2>Update Electronic</h2>
+<div>
+    <form [formGroup]="electronicRef" (ngSubmit)="updateElectronicDetails()">
         <label>Electronic Id</label>
         <input type="text" formControlName="_id"/><br/>
         <label>Electronic Name</label>

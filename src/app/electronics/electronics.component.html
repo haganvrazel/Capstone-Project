@@ -16,7 +16,10 @@
             </tr>
         </tbody>
     </table>
-    <a href="../new-electronic/new-electronic.component.html">
-        <button>Add Electronic</button>
-    </a>
+        <div class="btn-group">
+            <button class="nav-link" id="addButton" [routerLink]="['/electronic-store']">Add Electronic</button>
+            <button class="nav-link" id="deleteButton" [routerLink]="['/electronic-delete']">Delete Electronic</button>
+            <button class="nav-link" id="updateButton" [routerLink]="['/electronic-update']">Update Electronic</button>
+        </div>
+
 </div>

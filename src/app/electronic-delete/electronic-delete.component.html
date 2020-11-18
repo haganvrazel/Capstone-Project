@@ -1,0 +1,9 @@
+<h2>Delete Electronic By Id</h2>
+<div>
+    <label>Electronic Id</label>
+    <input type="text" #electId/>
+    <input type="button" value="Delete Electronic" 
+    (click)="deleteElectronic(electId.value)"/>
+    <br/>
+    {{result}}
+</div>

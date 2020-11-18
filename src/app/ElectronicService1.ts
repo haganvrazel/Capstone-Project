@@ -11,7 +11,8 @@ export class ElectronicService1 {
         this.electronics= [
             { _id: '100', name: 'Washing Machine', price: 110000},
             { _id: '101', name: 'iPhone X', price: 55000},
-            { _id: '102', name: 'Razor Laptop', price: 85000}
+            { _id: '102', name: 'Razor Laptop', price: 85000},
+            { _id: '103', name: 'Kindle', price: 1000}
         ];
     }
 
